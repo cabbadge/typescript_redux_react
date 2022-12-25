@@ -1,12 +1,19 @@
-import React, { useEffect } from 'react';
-import { useDispatch } from "react-redux";
-import { useTypeSelector } from "../hooks/useTypeSelector";
-import { fetchUsers } from "../store/action-creators/user";
+import React, {useEffect} from 'react';
+import {useDispatch} from "react-redux";
+import {useTypeSelector} from "../hooks/useTypeSelector";
+import {fetchUsers} from "../store/action-creators/user";
 
-const UserList: React.FC = () => {
-    const { users, error, loading } = useTypeSelector(state => state.user)
 
-    const dispatch = useDispatch()
+
+
+import type {} from 'redux-thunk/extend-redux';
+
+
+
+const UserList : React.FC= () => {
+    const {users,error,loading}= useTypeSelector(state => state.user)
+
+    const dispatch=useDispatch()
 
     useEffect(() => {
         dispatch(fetchUsers())
