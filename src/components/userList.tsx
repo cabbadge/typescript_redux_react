@@ -2,8 +2,7 @@ import React, {useEffect} from 'react';
 import {useDispatch} from "react-redux";
 import {useTypeSelector} from "../hooks/useTypeSelector";
 import {fetchUsers} from "../store/action-creators/user";
-
-
+import type {} from 'redux-thunk/extend-redux';
 
 
 
